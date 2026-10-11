@@ -56,6 +56,7 @@ $socials = array_filter(['linkedin' => setting('contact.linkedin'), 'facebook' =
     </div>
   </div>
 
+  <div class="wrap footer-mark" aria-hidden="true"><svg viewBox="0 0 291.9 36.2"><use href="<?= e($brand) ?>#wordmark"></use></svg></div>
   <div class="wrap site-footer__base">
     <p><?= __('footer.rights', ['year' => date('Y')]) ?></p>
     <p class="site-footer__legal">

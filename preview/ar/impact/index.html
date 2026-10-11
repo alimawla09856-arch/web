@@ -25,8 +25,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Noto+Naskh+Arabic:wght@600;700&family=Tajawal:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=497beb2f">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<link rel="stylesheet" href="/assets/css/site.css?v=67fee857">
+<script>
+(function (h) {
+  h.classList.replace('no-js', 'js');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  h.classList.add('motion-pending');
+  setTimeout(function () { h.classList.remove('motion-pending', 'is-loading'); }, 4500);
+})(document.documentElement);
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Argentum","url":"https://argentumco.com/en/","logo":"https://argentumco.com/assets/brand/argentum-512.png","slogan":"نحوّل الفضة إلى أخضر.","areaServed":"LB"}</script>
 </head>
 <body class="page-about">
@@ -106,61 +113,71 @@
       <h2 id="impact-title">الأثر البيئي</h2>
       <p>تحتوي أفلام الأشعة المستعملة على الفضة، وهي معدن ثقيل قد يلوّث التربة والمياه عند رمي الأفلام أو حرقها. من خلال جمع الأفلام واستخلاص الفضة منها، تُبعد Argentum هذه النفايات عن المكبّات، وتقلّل الحاجة إلى تعدين فضة جديدة، وتعيد معدناً ثميناً إلى الاقتصاد المحلي. كل عملية جمع تُوزن وتُوثَّق، ليتمكّن شركاؤنا من إثبات مساهمتهم البيئية.</p>
     </div>
-    <div class="routes" data-routes>
-  <div class="segmented" role="tablist" aria-label="قارنوا ما يحدث للأفلام المستعملة">
-          <button type="button" role="tab" id="route-tab-dumped" aria-controls="route-dumped" data-route="dumped"
-              aria-selected="false" tabindex="-1">تُرمى أو تُحرق</button>
-          <button type="button" role="tab" id="route-tab-argentum" aria-controls="route-argentum" data-route="argentum"
-              aria-selected="true" tabindex="0">تجمعها Argentum</button>
+    <div class="compare" data-compare>
+      <div class="compare__layer compare__layer--dumped">
+      <canvas class="compare__fx" data-compare-fx="dumped" aria-hidden="true"></canvas>
+      <div class="compare__content">
+        <h3 class="compare__tag">تُرمى أو تُحرق</h3>
+        <ol class="compare__flow">
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#film"></use></svg></span><span>فيلم أشعة مستعمل</span></li>
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#x"></use></svg></span><span>المكبّ أو الحرق في الهواء الطلق</span></li>
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#alert"></use></svg></span><span>تتسرّب الفضة إلى التربة والمياه</span></li>
+                  </ol>
+        <p class="compare__outcome">يضيع معدن ثمين، ويبقى التلوّث.</p>
       </div>
-      <div class="route route--dumped" id="route-dumped" role="tabpanel" aria-labelledby="route-tab-dumped" data-js-hidden>
-      <ol class="route__flow">
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#film"></use></svg></span><span>فيلم أشعة مستعمل</span></li>
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#x"></use></svg></span><span>المكبّ أو الحرق في الهواء الطلق</span></li>
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#alert"></use></svg></span><span>تتسرّب الفضة إلى التربة والمياه</span></li>
-              </ol>
-      <p class="route__outcome">يضيع معدن ثمين، ويبقى التلوّث.</p>
     </div>
-      <div class="route route--argentum" id="route-argentum" role="tabpanel" aria-labelledby="route-tab-argentum">
-      <ol class="route__flow">
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#film"></use></svg></span><span>فيلم أشعة مستعمل</span></li>
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#seal"></use></svg></span><span>جمع في حاويات مغلقة ووزن في الموقع</span></li>
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#flask"></use></svg></span><span>استخلاص الفضة وتنقيتها</span></li>
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#leaf"></use></svg></span><span>عودة الفضة إلى الاقتصاد المحلي</span></li>
-              </ol>
-      <p class="route__outcome">لا شيء يذهب إلى المكبّ، وتقلّ الحاجة إلى تعدين فضة جديدة، وتُوثَّق كل عملية جمع ليتمكّن شركاؤنا من إثبات مساهمتهم البيئية.</p>
+      <div class="compare__layer compare__layer--argentum">
+      <canvas class="compare__fx" data-compare-fx="argentum" aria-hidden="true"></canvas>
+      <div class="compare__content">
+        <h3 class="compare__tag">تجمعها Argentum</h3>
+        <ol class="compare__flow">
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#film"></use></svg></span><span>فيلم أشعة مستعمل</span></li>
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#seal"></use></svg></span><span>جمع في حاويات مغلقة ووزن في الموقع</span></li>
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#flask"></use></svg></span><span>استخلاص الفضة وتنقيتها</span></li>
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#leaf"></use></svg></span><span>عودة الفضة إلى الاقتصاد المحلي</span></li>
+                  </ol>
+        <p class="compare__outcome">لا شيء يذهب إلى المكبّ، وتقلّ الحاجة إلى تعدين فضة جديدة، وتُوثَّق كل عملية جمع ليتمكّن شركاؤنا من إثبات مساهمتهم البيئية.</p>
+      </div>
     </div>
-    </div>
+    <div class="compare__handle" data-compare-handle role="slider" tabindex="0" aria-label="مقارنة: تُرمى أو تُحرق، أو تجمعها Argentum" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+    <span class="compare__grip"><svg class="ico flip" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#chevron"></use></svg><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#chevron"></use></svg></span>
+    <span class="compare__hint">اسحبوا للمقارنة</span>
+  </div>
+</div>
   </div>
 </section>
 
-<section class="section section--tight" aria-labelledby="counters-title">
+<section class="section section--tight counters" aria-labelledby="counters-title">
   <div class="wrap">
-    <h2 class="sr-only" id="counters-title">التزاماتنا بالأرقام</h2>
-    <dl class="readout" data-counters>
+    <h2 class="counters__title" id="counters-title" data-split>التزاماتنا بالأرقام</h2>
+    <dl class="readout" data-odometers>
               <div class="readout__cell">
           <dt class="readout__label">من الأفلام تُتلف بأمان</dt>
           <dd class="readout__value">
-            <span class="readout__num" data-count="100" data-decimals="0">100</span>
-            <span class="readout__unit">%</span>          </dd>
+            <span class="sr-only">100 %</span>
+            <span class="odo readout__num" aria-hidden="true" data-odometer><span class="odo__digit" style="--d:1"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo__digit" style="--d:0"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo__digit" style="--d:0"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></span>
+            <span class="readout__unit" aria-hidden="true">%</span>          </dd>
         </div>
               <div class="readout__cell">
           <dt class="readout__label">إلى المكبّ</dt>
           <dd class="readout__value">
-            <span class="readout__num" data-count="0" data-decimals="0">0</span>
-            <span class="readout__unit">كغ</span>          </dd>
+            <span class="sr-only">0 كغ</span>
+            <span class="odo readout__num" aria-hidden="true" data-odometer><span class="odo__digit" style="--d:0"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></span>
+            <span class="readout__unit" aria-hidden="true">كغ</span>          </dd>
         </div>
               <div class="readout__cell">
           <dt class="readout__label">للرد على طلب الجمع</dt>
           <dd class="readout__value">
-            <span class="readout__num" data-count="48" data-decimals="0">48</span>
-            <span class="readout__unit">ساعة</span>          </dd>
+            <span class="sr-only">48 ساعة</span>
+            <span class="odo readout__num" aria-hidden="true" data-odometer><span class="odo__digit" style="--d:4"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo__digit" style="--d:8"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></span>
+            <span class="readout__unit" aria-hidden="true">ساعة</span>          </dd>
         </div>
               <div class="readout__cell">
           <dt class="readout__label">نقاوة الفضة بعد التحليل</dt>
           <dd class="readout__value">
-            <span class="readout__num" data-count="99.9" data-decimals="1">99.9</span>
-            <span class="readout__unit">%</span>          </dd>
+            <span class="sr-only">99.9 %</span>
+            <span class="odo readout__num" aria-hidden="true" data-odometer><span class="odo__digit" style="--d:9"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo__digit" style="--d:9"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo__sep">.</span><span class="odo__digit" style="--d:9"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></span>
+            <span class="readout__unit" aria-hidden="true">%</span>          </dd>
         </div>
           </dl>
   </div>
@@ -227,6 +244,7 @@
           </div>
   </div>
 
+  <div class="wrap footer-mark" aria-hidden="true"><svg viewBox="0 0 291.9 36.2"><use href="/assets/brand/logo-symbols.svg#wordmark"></use></svg></div>
   <div class="wrap site-footer__base">
     <p>© 2026 Argentum. جميع الحقوق محفوظة.</p>
     <p class="site-footer__legal">
@@ -239,6 +257,13 @@
   <svg class="ico wa-fab__icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#whatsapp"></use></svg>  <span class="wa-fab__label">راسلونا عبر واتساب</span>
 </a>
 <script>window.ARGENTUM={"lang":"ar","rtl":true,"lead":"/api/lead","verify":"/api/verify","brand":"/assets/brand/logo-symbols.svg","icons":"/assets/img/icons.svg","ga":"","demo":{"ARG-CD-2610-7K3Q":{"kind":"شهادة إتلاف","issued_on":"2026-10-14","organisation":"مستشفاكم","weight_kg":184.6,"purity":null,"reference":""},"ARG-AS-2610-Q8MZ":{"kind":"تقرير تحليل (نقاوة)","issued_on":"2026-10-21","organisation":"—","weight_kg":2.45,"purity":99.9,"reference":"B-26-041"}},"captcha":null,"i18n":{"sending":"جارٍ الإرسال…","error":"تعذّر إرسال طلبكم. تحقّقوا من الاتصال وأعيدوا المحاولة، أو راسلونا عبر واتساب.","fix":"بعض الحقول تحتاج إلى تصحيح.","errors":{"required":"هذا الحقل مطلوب.","email":"أدخلوا بريداً إلكترونياً صحيحاً، مثل name@hospital.com.","phone":"أدخلوا رقم هاتف من 7 أرقام على الأقل.","option":"اختاروا أحد الخيارات.","too_long":"النص طويل جداً.","number":"أدخلوا رقماً بين 0 و100,000.","date":"أدخلوا تاريخاً صحيحاً.","date_past":"اختاروا تاريخ اليوم أو تاريخاً لاحقاً."},"verify":{"title":"تحقّقوا من وثيقة صادرة عن Argentum","intro":"تحمل كل شهادة إتلاف وكل تقرير تحليل نصدره رمزاً فريداً مطبوعاً عليها. أدخلوا الرمز أدناه للتأكّد من صحّتها.","label":"رمز الوثيقة","placeholder":"ARG-CD-0000-XXXX","button":"تحقّق","checking":"جارٍ التحقّق…","where":"أين أجد الرمز؟","where_text":"في أسفل الوثيقة، بجانب التوقيع، ويبدأ بـ ARG-.","valid_title":"وثيقة صحيحة","valid_text":"صدرت هذه الوثيقة عن Argentum.","fields":{"kind":"النوع","issued_on":"تاريخ الإصدار","organisation":"صادرة إلى","weight":"الوزن","purity":"النقاوة","reference":"المرجع"},"revoked_title":"هذه الوثيقة ملغاة","revoked_text":"تواصلوا معنا إذا استلمتم هذه الوثيقة.","not_found_title":"لا توجد وثيقة بهذا الرمز","not_found_text":"تحقّقوا من الرمز المطبوع على الوثيقة وأعيدوا المحاولة. إذا استمرّ عدم التطابق، تواصلوا معنا.","error":"تعذّر التحقّق الآن. أعيدوا المحاولة بعد قليل.","rate_limited":"محاولات كثيرة. انتظروا بضع دقائق ثم أعيدوا المحاولة.","kinds":{"destruction":"شهادة إتلاف","assay":"تقرير تحليل (نقاوة)"}}}};</script>
-<script src="/assets/js/site.js?v=1040fed2" defer></script>
+<script src="/assets/vendor/gsap/gsap.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/gsap/ScrollTrigger.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/gsap/SplitText.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/gsap/DrawSVGPlugin.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/gsap/ScrambleTextPlugin.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/lenis-1.3.26.min.js?v=31441821" defer></script>
+<script src="/assets/js/site.js?v=19c79b74" defer></script>
+<script src="/assets/js/motion.js?v=c4448038" defer></script>
 </body>
 </html>

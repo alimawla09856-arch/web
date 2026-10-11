@@ -1,22 +1,26 @@
 <?php
-/** Animated counters. Admin chooses "promise" figures or real totals. */
+/**
+ * Counters with rolling digits. Admin chooses launch "commitments" or real totals.
+ * The final figures are rendered server-side; JavaScript rolls them in.
+ */
 defined('ARGENTUM') || exit;
 $mode = setting('counters.mode', 'promise') === 'totals' ? 'totals' : 'promise';
 $values = (array) setting('counters.' . $mode, []);
 $labels = tl('counters.' . $mode);
 ?>
-<section class="section section--tight<?= ($tone ?? '') === 'mist' ? ' section--mist' : '' ?>" aria-labelledby="counters-title">
+<section class="section section--tight counters" aria-labelledby="counters-title">
   <div class="wrap">
-    <h2 class="sr-only" id="counters-title"><?= __('counters.title') ?></h2>
-    <dl class="readout" data-counters>
+    <h2 class="counters__title" id="counters-title" data-split><?= __('counters.title') ?></h2>
+    <dl class="readout" data-odometers>
       <?php foreach ($labels as $i => $c):
           $v = (float) ($values[$i] ?? 0);
-          $decimals = floor($v) == $v ? 0 : 1; ?>
+          $text = number_format($v, floor($v) == $v ? 0 : 1); ?>
         <div class="readout__cell">
           <dt class="readout__label"><?= e($c['label']) ?></dt>
           <dd class="readout__value">
-            <span class="readout__num" data-count="<?= e((string) $v) ?>" data-decimals="<?= $decimals ?>"><?= e(number_format($v, $decimals)) ?></span>
-            <?php if ($c['unit'] !== ''): ?><span class="readout__unit"><?= e($c['unit']) ?></span><?php endif; ?>
+            <span class="sr-only"><?= e($text . ' ' . $c['unit']) ?></span>
+            <span class="odo readout__num" aria-hidden="true" data-odometer><?php foreach (str_split($text) as $ch): ?><?php if (ctype_digit($ch)): ?><span class="odo__digit" style="--d:<?= $ch ?>"><span class="odo__strip"><?php for ($n = 0; $n <= 9; $n++): ?><span><?= $n ?></span><?php endfor; ?></span></span><?php else: ?><span class="odo__sep"><?= e($ch) ?></span><?php endif; ?><?php endforeach; ?></span>
+            <?php if ($c['unit'] !== ''): ?><span class="readout__unit" aria-hidden="true"><?= e($c['unit']) ?></span><?php endif; ?>
           </dd>
         </div>
       <?php endforeach; ?>

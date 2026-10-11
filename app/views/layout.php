@@ -63,7 +63,17 @@ $org = array_filter([
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?<?= $fonts ?>&display=swap">
 <link rel="stylesheet" href="<?= e(asset('css/site.css')) ?>">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>
+(function (h) {
+  h.classList.replace('no-js', 'js');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  h.classList.add('motion-pending');
+  setTimeout(function () { h.classList.remove('motion-pending', 'is-loading'); }, 4500);
+<?php if ($page === 'home'): ?>
+  try { if (!sessionStorage.getItem('argentum-intro')) h.classList.add('is-loading'); } catch (e) {}
+<?php endif; ?>
+})(document.documentElement);
+</script>
 <script type="application/ld+json"><?= json_encode($org, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 <?php if ($page === 'hospitals'): ?>
 <script type="application/ld+json"><?= json_encode([
@@ -74,6 +84,14 @@ $org = array_filter([
 <?php endif; ?>
 </head>
 <body class="page-<?= e($page) ?>">
+<?php if ($page === 'home'): ?>
+<div class="preloader" data-preloader aria-hidden="true">
+  <div class="preloader__inner">
+    <svg class="preloader__leaf" viewBox="0 0 107.8 144"><path d="<?= e(json_decode((string) file_get_contents(ROOT_DIR . '/assets/brand/icon-path.json'), true)['d'] ?? '') ?>"/></svg>
+    <p class="preloader__count"><b data-preloader-count>00</b>Ag</p>
+  </div>
+</div>
+<?php endif; ?>
 <a class="skip-link" href="#main"><?= __('nav.skip') ?></a>
 <?php partial('header', ['page' => $page]); ?>
 <main id="main" tabindex="-1">
@@ -111,6 +129,11 @@ $org = array_filter([
         'verify'  => tv('verify'),
     ],
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?>;</script>
+<?php foreach (['gsap/gsap.min.js', 'gsap/ScrollTrigger.min.js', 'gsap/SplitText.min.js', 'gsap/DrawSVGPlugin.min.js', 'gsap/ScrambleTextPlugin.min.js', 'lenis-1.3.26.min.js'] as $lib): ?>
+<script src="<?= e(asset('vendor/' . $lib)) ?>" defer></script>
+<?php endforeach; ?>
 <script src="<?= e(asset('js/site.js')) ?>" defer></script>
+<?php if ($page === 'home'): ?><script src="<?= e(asset('js/world.js')) ?>" defer></script><?php endif; ?>
+<script src="<?= e(asset('js/motion.js')) ?>" defer></script>
 </body>
 </html>

@@ -44,7 +44,7 @@ $permits = (string) setting_l('company.permits', '');
       <h2 id="impact-title"><?= __('about.impact.title') ?></h2>
       <p><?= __('about.impact.text') ?></p>
     </div>
-    <?php partial('routes', ['showLink' => false]); ?>
+    <?php partial('compare'); ?>
   </div>
 </section>
 

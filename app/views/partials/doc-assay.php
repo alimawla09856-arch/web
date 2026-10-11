@@ -10,7 +10,7 @@ $d = 'docs.assay.';
       <p class="doc__brand"><svg viewBox="0 0 107.8 144" aria-hidden="true"><use href="<?= e($brand) ?>#icon"></use></svg><svg viewBox="0 0 291.9 36.2" aria-hidden="true"><use href="<?= e($brand) ?>#wordmark"></use></svg></p>
       <h3 class="doc__title" style="margin-block-start:.9rem"><?= __($d . 'title') ?></h3>
     </div>
-    <p class="doc__code"><?= __($d . 'no') ?><strong>ARG-AS-2610-Q8MZ</strong></p>
+    <p class="doc__code"><?= __($d . 'no') ?><strong data-scramble-code>ARG-AS-2610-Q8MZ</strong></p>
   </div>
   <div class="doc__result"><span><?= __($d . 'element') ?></span><b>99.9%</b></div>
   <dl class="doc__fields">

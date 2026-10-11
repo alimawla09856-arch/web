@@ -25,8 +25,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=497beb2f">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<link rel="stylesheet" href="/assets/css/site.css?v=67fee857">
+<script>
+(function (h) {
+  h.classList.replace('no-js', 'js');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  h.classList.add('motion-pending');
+  setTimeout(function () { h.classList.remove('motion-pending', 'is-loading'); }, 4500);
+})(document.documentElement);
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Argentum","url":"https://argentumco.com/en/","logo":"https://argentumco.com/assets/brand/argentum-512.png","slogan":"Turning silver into green.","areaServed":"LB"}</script>
 </head>
 <body class="page-about">
@@ -106,61 +113,71 @@
       <h2 id="impact-title">Environmental impact</h2>
       <p>Used X-ray film contains silver, a heavy metal that can pollute soil and water when film is dumped or burned. By collecting the film and recovering its silver, Argentum keeps it out of landfill, reduces the need for newly mined silver, and returns a valuable metal to the local economy. Every collection is weighed and documented, so our partners can report their own environmental contribution.</p>
     </div>
-    <div class="routes" data-routes>
-  <div class="segmented" role="tablist" aria-label="Compare what happens to used film">
-          <button type="button" role="tab" id="route-tab-dumped" aria-controls="route-dumped" data-route="dumped"
-              aria-selected="false" tabindex="-1">Dumped or burned</button>
-          <button type="button" role="tab" id="route-tab-argentum" aria-controls="route-argentum" data-route="argentum"
-              aria-selected="true" tabindex="0">Collected by Argentum</button>
+    <div class="compare" data-compare>
+      <div class="compare__layer compare__layer--dumped">
+      <canvas class="compare__fx" data-compare-fx="dumped" aria-hidden="true"></canvas>
+      <div class="compare__content">
+        <h3 class="compare__tag">Dumped or burned</h3>
+        <ol class="compare__flow">
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#film"></use></svg></span><span>Used X-ray film</span></li>
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#x"></use></svg></span><span>Landfill or open burning</span></li>
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#alert"></use></svg></span><span>Silver seeps into soil and water</span></li>
+                  </ol>
+        <p class="compare__outcome">A valuable metal is lost, and the pollution stays.</p>
       </div>
-      <div class="route route--dumped" id="route-dumped" role="tabpanel" aria-labelledby="route-tab-dumped" data-js-hidden>
-      <ol class="route__flow">
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#film"></use></svg></span><span>Used X-ray film</span></li>
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#x"></use></svg></span><span>Landfill or open burning</span></li>
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#alert"></use></svg></span><span>Silver seeps into soil and water</span></li>
-              </ol>
-      <p class="route__outcome">A valuable metal is lost, and the pollution stays.</p>
     </div>
-      <div class="route route--argentum" id="route-argentum" role="tabpanel" aria-labelledby="route-tab-argentum">
-      <ol class="route__flow">
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#film"></use></svg></span><span>Used X-ray film</span></li>
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#seal"></use></svg></span><span>Sealed collection, weighed on site</span></li>
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#flask"></use></svg></span><span>Silver recovered and refined</span></li>
-                  <li class="route__node"><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#leaf"></use></svg></span><span>Silver back in the local economy</span></li>
-              </ol>
-      <p class="route__outcome">Nothing goes to landfill, less silver needs to be mined, and every collection is documented so partners can report their own contribution.</p>
+      <div class="compare__layer compare__layer--argentum">
+      <canvas class="compare__fx" data-compare-fx="argentum" aria-hidden="true"></canvas>
+      <div class="compare__content">
+        <h3 class="compare__tag">Collected by Argentum</h3>
+        <ol class="compare__flow">
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#film"></use></svg></span><span>Used X-ray film</span></li>
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#seal"></use></svg></span><span>Sealed collection, weighed on site</span></li>
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#flask"></use></svg></span><span>Silver recovered and refined</span></li>
+                      <li><span class="route__dot"><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#leaf"></use></svg></span><span>Silver back in the local economy</span></li>
+                  </ol>
+        <p class="compare__outcome">Nothing goes to landfill, less silver needs to be mined, and every collection is documented so partners can report their own contribution.</p>
+      </div>
     </div>
-    </div>
+    <div class="compare__handle" data-compare-handle role="slider" tabindex="0" aria-label="Compare: dumped or burned, and collected by Argentum" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+    <span class="compare__grip"><svg class="ico flip" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#chevron"></use></svg><svg class="ico" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#chevron"></use></svg></span>
+    <span class="compare__hint">Drag to compare</span>
+  </div>
+</div>
   </div>
 </section>
 
-<section class="section section--tight" aria-labelledby="counters-title">
+<section class="section section--tight counters" aria-labelledby="counters-title">
   <div class="wrap">
-    <h2 class="sr-only" id="counters-title">Our commitments, in numbers</h2>
-    <dl class="readout" data-counters>
+    <h2 class="counters__title" id="counters-title" data-split>Our commitments, in numbers</h2>
+    <dl class="readout" data-odometers>
               <div class="readout__cell">
           <dt class="readout__label">of film securely destroyed</dt>
           <dd class="readout__value">
-            <span class="readout__num" data-count="100" data-decimals="0">100</span>
-            <span class="readout__unit">%</span>          </dd>
+            <span class="sr-only">100 %</span>
+            <span class="odo readout__num" aria-hidden="true" data-odometer><span class="odo__digit" style="--d:1"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo__digit" style="--d:0"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo__digit" style="--d:0"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></span>
+            <span class="readout__unit" aria-hidden="true">%</span>          </dd>
         </div>
               <div class="readout__cell">
           <dt class="readout__label">sent to landfill</dt>
           <dd class="readout__value">
-            <span class="readout__num" data-count="0" data-decimals="0">0</span>
-            <span class="readout__unit">kg</span>          </dd>
+            <span class="sr-only">0 kg</span>
+            <span class="odo readout__num" aria-hidden="true" data-odometer><span class="odo__digit" style="--d:0"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></span>
+            <span class="readout__unit" aria-hidden="true">kg</span>          </dd>
         </div>
               <div class="readout__cell">
           <dt class="readout__label">collection response</dt>
           <dd class="readout__value">
-            <span class="readout__num" data-count="48" data-decimals="0">48</span>
-            <span class="readout__unit">h</span>          </dd>
+            <span class="sr-only">48 h</span>
+            <span class="odo readout__num" aria-hidden="true" data-odometer><span class="odo__digit" style="--d:4"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo__digit" style="--d:8"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></span>
+            <span class="readout__unit" aria-hidden="true">h</span>          </dd>
         </div>
               <div class="readout__cell">
           <dt class="readout__label">assayed silver purity</dt>
           <dd class="readout__value">
-            <span class="readout__num" data-count="99.9" data-decimals="1">99.9</span>
-            <span class="readout__unit">%</span>          </dd>
+            <span class="sr-only">99.9 %</span>
+            <span class="odo readout__num" aria-hidden="true" data-odometer><span class="odo__digit" style="--d:9"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo__digit" style="--d:9"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo__sep">.</span><span class="odo__digit" style="--d:9"><span class="odo__strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></span>
+            <span class="readout__unit" aria-hidden="true">%</span>          </dd>
         </div>
           </dl>
   </div>
@@ -227,6 +244,7 @@
           </div>
   </div>
 
+  <div class="wrap footer-mark" aria-hidden="true"><svg viewBox="0 0 291.9 36.2"><use href="/assets/brand/logo-symbols.svg#wordmark"></use></svg></div>
   <div class="wrap site-footer__base">
     <p>© 2026 Argentum. All rights reserved.</p>
     <p class="site-footer__legal">
@@ -239,6 +257,13 @@
   <svg class="ico wa-fab__icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#whatsapp"></use></svg>  <span class="wa-fab__label">Chat on WhatsApp</span>
 </a>
 <script>window.ARGENTUM={"lang":"en","rtl":false,"lead":"/api/lead","verify":"/api/verify","brand":"/assets/brand/logo-symbols.svg","icons":"/assets/img/icons.svg","ga":"","demo":{"ARG-CD-2610-7K3Q":{"kind":"Certificate of destruction","issued_on":"2026-10-14","organisation":"Your hospital","weight_kg":184.6,"purity":null,"reference":""},"ARG-AS-2610-Q8MZ":{"kind":"Assay report","issued_on":"2026-10-21","organisation":"—","weight_kg":2.45,"purity":99.9,"reference":"B-26-041"}},"captcha":null,"i18n":{"sending":"Sending…","error":"We could not send your request. Check your connection and try again, or contact us on WhatsApp.","fix":"Some fields need your attention.","errors":{"required":"This field is required.","email":"Enter a valid e-mail address, like name@hospital.com.","phone":"Enter a phone number with at least 7 digits.","option":"Choose one of the options.","too_long":"This text is too long.","number":"Enter a number between 0 and 100,000.","date":"Enter a valid date.","date_past":"Choose today or a later date."},"verify":{"title":"Verify an Argentum document","intro":"Every certificate of destruction and assay report we issue carries a unique code, printed on the document. Enter it below to confirm it is genuine.","label":"Document code","placeholder":"ARG-CD-0000-XXXX","button":"Verify","checking":"Checking…","where":"Where is the code?","where_text":"At the bottom of the document, next to the signature. It starts with ARG-.","valid_title":"Genuine document","valid_text":"This document was issued by Argentum.","fields":{"kind":"Type","issued_on":"Issued on","organisation":"Issued to","weight":"Weight","purity":"Purity","reference":"Reference"},"revoked_title":"This document was revoked","revoked_text":"Contact us if you were given this document.","not_found_title":"No document matches this code","not_found_text":"Check the code printed on the document and try again. If it still does not match, contact us.","error":"We could not check the code right now. Try again in a moment.","rate_limited":"Too many attempts. Wait a few minutes and try again.","kinds":{"destruction":"Certificate of destruction","assay":"Assay report"}}}};</script>
-<script src="/assets/js/site.js?v=1040fed2" defer></script>
+<script src="/assets/vendor/gsap/gsap.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/gsap/ScrollTrigger.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/gsap/SplitText.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/gsap/DrawSVGPlugin.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/gsap/ScrambleTextPlugin.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/lenis-1.3.26.min.js?v=31441821" defer></script>
+<script src="/assets/js/site.js?v=19c79b74" defer></script>
+<script src="/assets/js/motion.js?v=c4448038" defer></script>
 </body>
 </html>

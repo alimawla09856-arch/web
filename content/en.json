@@ -131,6 +131,30 @@
         "cta": {
             "title": "Have used X-ray film in storage?",
             "text": "Tell us roughly how much you have. We respond within 48 hours to arrange a collection."
+        },
+        "world": {
+            "label": "The journey of a gram of silver",
+            "scroll": "Scroll to follow the silver",
+            "rail": [
+                "Film",
+                "Collection",
+                "Destruction",
+                "Extraction",
+                "Market",
+                "Green"
+            ],
+            "weight": "Weighed on site",
+            "patient": "Patient label",
+            "destroyed": "Destroyed",
+            "purity": "Assayed purity",
+            "map_title": "Back in the local economy",
+            "map_text": "We collect across Lebanon and return the recovered silver to the local economy, sold to silver shops and refiners at the market price.",
+            "final_title": "Turning silver into green.",
+            "final_text": "Nothing goes to landfill. Every gram of silver returns to use."
+        },
+        "compare": {
+            "hint": "Drag to compare",
+            "label": "Compare: dumped or burned, and collected by Argentum"
         }
     },
     "steps": [
@@ -277,6 +301,16 @@
             "note": "Purity of recovered silver",
             "signature": "Authorised signature",
             "verify": "Verify at argentumco.com/verify"
+        },
+        "receipt": {
+            "title": "Collection receipt",
+            "no": "Receipt no.",
+            "to": "Organisation",
+            "date": "Collection date",
+            "weight": "Net weight",
+            "payment": "Payment",
+            "payment_value": "At the agreed rate",
+            "signature": "Signed on site"
         }
     },
     "hospitals": {

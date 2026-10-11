@@ -25,8 +25,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=497beb2f">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<link rel="stylesheet" href="/assets/css/site.css?v=67fee857">
+<script>
+(function (h) {
+  h.classList.replace('no-js', 'js');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  h.classList.add('motion-pending');
+  setTimeout(function () { h.classList.remove('motion-pending', 'is-loading'); }, 4500);
+})(document.documentElement);
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Argentum","url":"https://argentumco.com/en/","logo":"https://argentumco.com/assets/brand/argentum-512.png","slogan":"Turning silver into green.","areaServed":"LB"}</script>
 </head>
 <body class="page-process">
@@ -270,6 +277,7 @@
           </div>
   </div>
 
+  <div class="wrap footer-mark" aria-hidden="true"><svg viewBox="0 0 291.9 36.2"><use href="/assets/brand/logo-symbols.svg#wordmark"></use></svg></div>
   <div class="wrap site-footer__base">
     <p>© 2026 Argentum. All rights reserved.</p>
     <p class="site-footer__legal">
@@ -282,6 +290,13 @@
   <svg class="ico wa-fab__icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#whatsapp"></use></svg>  <span class="wa-fab__label">Chat on WhatsApp</span>
 </a>
 <script>window.ARGENTUM={"lang":"en","rtl":false,"lead":"/api/lead","verify":"/api/verify","brand":"/assets/brand/logo-symbols.svg","icons":"/assets/img/icons.svg","ga":"","demo":{"ARG-CD-2610-7K3Q":{"kind":"Certificate of destruction","issued_on":"2026-10-14","organisation":"Your hospital","weight_kg":184.6,"purity":null,"reference":""},"ARG-AS-2610-Q8MZ":{"kind":"Assay report","issued_on":"2026-10-21","organisation":"—","weight_kg":2.45,"purity":99.9,"reference":"B-26-041"}},"captcha":null,"i18n":{"sending":"Sending…","error":"We could not send your request. Check your connection and try again, or contact us on WhatsApp.","fix":"Some fields need your attention.","errors":{"required":"This field is required.","email":"Enter a valid e-mail address, like name@hospital.com.","phone":"Enter a phone number with at least 7 digits.","option":"Choose one of the options.","too_long":"This text is too long.","number":"Enter a number between 0 and 100,000.","date":"Enter a valid date.","date_past":"Choose today or a later date."},"verify":{"title":"Verify an Argentum document","intro":"Every certificate of destruction and assay report we issue carries a unique code, printed on the document. Enter it below to confirm it is genuine.","label":"Document code","placeholder":"ARG-CD-0000-XXXX","button":"Verify","checking":"Checking…","where":"Where is the code?","where_text":"At the bottom of the document, next to the signature. It starts with ARG-.","valid_title":"Genuine document","valid_text":"This document was issued by Argentum.","fields":{"kind":"Type","issued_on":"Issued on","organisation":"Issued to","weight":"Weight","purity":"Purity","reference":"Reference"},"revoked_title":"This document was revoked","revoked_text":"Contact us if you were given this document.","not_found_title":"No document matches this code","not_found_text":"Check the code printed on the document and try again. If it still does not match, contact us.","error":"We could not check the code right now. Try again in a moment.","rate_limited":"Too many attempts. Wait a few minutes and try again.","kinds":{"destruction":"Certificate of destruction","assay":"Assay report"}}}};</script>
-<script src="/assets/js/site.js?v=1040fed2" defer></script>
+<script src="/assets/vendor/gsap/gsap.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/gsap/ScrollTrigger.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/gsap/SplitText.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/gsap/DrawSVGPlugin.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/gsap/ScrambleTextPlugin.min.js?v=31441821" defer></script>
+<script src="/assets/vendor/lenis-1.3.26.min.js?v=31441821" defer></script>
+<script src="/assets/js/site.js?v=19c79b74" defer></script>
+<script src="/assets/js/motion.js?v=c4448038" defer></script>
 </body>
 </html>

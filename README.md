@@ -5,6 +5,7 @@ Bilingual (English / Arabic) B2B website for **Argentum**, a Lebanese company th
 Built for the **Premium package** (see `docs/HANDOVER.md` for the feature checklist): two lead forms with smart conditional fields, instant e-mail and WhatsApp alerts, an admin panel with Excel/CSV export, Google Analytics / Search Console hooks, and a full right-to-left Arabic version.
 
 - **Stack:** plain PHP 8.1+ and SQLite, vanilla JavaScript, one CSS file. No framework, no build step, no Composer — it runs on any standard cPanel hosting.
+- **Motion:** GSAP 3.15 (ScrollTrigger, SplitText, DrawSVG, ScrambleText — free standard licence) and Lenis smooth scrolling, vendored in `assets/vendor/`. The home page's scroll story is a small custom WebGL particle engine (`assets/js/world.js`, no 3D library). Reduced-motion and no-WebGL visitors get a calm, fully readable version.
 - **Languages:** separate URLs per language (`/en/…`, `/ar/…`), English by default, the visitor's choice is remembered.
 - **Speed:** about 21 KB of CSS + JS after compression (85 KB raw), an 8 KB home page, Google Fonts with `display=swap`, and no photos on the critical path — the hero is drawn on a canvas.
 
@@ -12,7 +13,7 @@ Built for the **Premium package** (see `docs/HANDOVER.md` for the feature checkl
 
 | URL | Page |
 | --- | --- |
-| `/en/` | Home: hero, trust strip, the two audiences, interactive process, counters, impact comparison, paper trail |
+| `/en/` | Home: a scroll story in 3D particles (X-ray film → sealed container → shredded film → silver ingot → Lebanon → the green leaf), the two audiences, rolling counters, documents in a horizontal scroll, drag-to-compare impact |
 | `/en/hospitals/` | For hospitals: benefits, what we collect, confidentiality, FAQ, **Form A — Request a collection** |
 | `/en/silver-buyers/` | For silver buyers: purity, pricing, assay report, **Form B — Buy recovered silver** |
 | `/en/process/` | The four documented steps and the paper trail |
