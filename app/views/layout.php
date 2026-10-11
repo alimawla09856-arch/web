@@ -7,6 +7,7 @@ $metaKey = 'meta.pages.' . $page;
 $title = t($metaKey . '.title');
 $description = t($metaKey . '.description');
 $isPublic = $page !== '404';
+$preview = defined('ARGENTUM_PREVIEW');
 $canonical = $isPublic ? absolute_url(page_url($page)) : '';
 $ga = (string) setting('analytics.ga4_id', '');
 $gsc = (string) setting('analytics.gsc_verification', '');
@@ -42,6 +43,7 @@ $org = array_filter([
 <?php else: ?>
 <meta name="robots" content="noindex">
 <?php endif; ?>
+<?php if ($preview && $isPublic): ?><meta name="robots" content="noindex, nofollow"><?php endif; ?>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Argentum">
 <meta property="og:title" content="<?= e($title) ?>">
@@ -96,6 +98,10 @@ $org = array_filter([
     'brand'   => url('assets/brand/logo-symbols.svg'),
     'icons'   => url('assets/img/icons.svg'),
     'ga'      => $ga,
+    'demo'    => $preview ? [
+        'ARG-CD-2610-7K3Q' => ['kind' => t('verify.kinds.destruction'), 'issued_on' => '2026-10-14', 'organisation' => t('docs.certificate.to_value'), 'weight_kg' => 184.6, 'purity' => null, 'reference' => ''],
+        'ARG-AS-2610-Q8MZ' => ['kind' => t('verify.kinds.assay'), 'issued_on' => '2026-10-21', 'organisation' => '—', 'weight_kg' => 2.45, 'purity' => 99.9, 'reference' => 'B-26-041'],
+    ] : null,
     'captcha' => config('captcha.provider') && config('captcha.site_key') ? ['provider' => config('captcha.provider'), 'key' => config('captcha.site_key')] : null,
     'i18n'    => [
         'sending' => t('forms.sending'),

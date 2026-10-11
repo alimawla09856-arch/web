@@ -33,6 +33,16 @@ php -S localhost:8000 index.php
 
 Open <http://localhost:8000>. Without `app/config.php` the sample configuration is used; the admin panel then shows a password-hash generator on `/admin/login`.
 
+## Design preview on Netlify
+
+`preview/` is a static copy of every page for showing the design before launch (forms show their confirmation without sending, `/verify/` accepts the sample code `ARG-CD-2610-7K3Q`, and every page is `noindex`).
+
+- Rebuild after any change: `php tools/build-preview.php`
+- Netlify, linked to this repository: publish directory `preview` (already set in `netlify.toml`, no build command).
+- Or drag the `preview/` folder onto <https://app.netlify.com/drop>.
+
+Do not upload `preview/` or `tools/` to the PHP host (`.htaccess` blocks them anyway).
+
 ## Deploy to cPanel
 
 1. Upload every file of this repository to `public_html/` (or a subfolder — paths adapt automatically). Keep the `.htaccess` files.

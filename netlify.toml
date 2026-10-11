@@ -1,0 +1,4 @@
+# Netlify design preview: serves the static build in /preview
+# (generated with `php tools/build-preview.php`). The real site runs on PHP hosting.
+[build]
+  publish = "preview"

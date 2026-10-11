@@ -567,6 +567,14 @@
         submitBtn.disabled = true;
         submitBtn.textContent = (A.i18n && A.i18n.sending) || '…';
         try {
+          if (A.demo) {
+            // Static design preview: no server, show the confirmation as it will appear
+            await new Promise((r) => setTimeout(r, 700));
+            form.hidden = true;
+            success.hidden = false;
+            success.focus();
+            return;
+          }
           const data = new FormData(form);
           if (A.captcha) data.set('captcha', await captchaToken());
           const res = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
@@ -634,6 +642,9 @@
       const v = ($('input:checked', chooser) || {}).value || 'collection';
       panels.forEach((p) => { p.hidden = p.dataset.chooserPanel !== v; });
     };
+    const wanted = new URLSearchParams(location.search).get('form');
+    const radio = wanted && $('input[value="' + CSS.escape(wanted) + '"]', chooser);
+    if (radio) radio.checked = true;
     chooser.addEventListener('change', apply);
     apply();
   }
@@ -662,8 +673,16 @@
       btn.disabled = true;
       btn.textContent = t.checking || '…';
       try {
-        const res = await fetch(A.verify + '?lang=' + A.lang + '&code=' + encodeURIComponent(code), { headers: { Accept: 'application/json' } });
-        const json = await res.json();
+        let res = { status: 200 };
+        let json;
+        if (A.demo) {
+          const doc = A.demo[code.toUpperCase()];
+          json = doc ? Object.assign({ found: true, revoked: false }, doc) : { found: false };
+          await new Promise((r) => setTimeout(r, 400));
+        } else {
+          res = await fetch(A.verify + '?lang=' + A.lang + '&code=' + encodeURIComponent(code), { headers: { Accept: 'application/json' } });
+          json = await res.json();
+        }
         if (res.status === 429) { render('missing', t.rate_limited || '', '', []); return; }
         if (!json.found) { render('missing', t.not_found_title, t.not_found_text, []); return; }
         const f = t.fields || {};

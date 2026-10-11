@@ -18,6 +18,7 @@ $code = normalise_code((string) ($_GET['code'] ?? ''));
         <button class="btn btn--primary" type="submit"><?= icon('search') ?><?= __('verify.button') ?></button>
       </div>
       <p class="field__hint" id="verify-where"><strong><?= __('verify.where') ?></strong> <?= __('verify.where_text') ?></p>
+      <?php if (defined('ARGENTUM_PREVIEW')): ?><p class="field__hint"><?= is_rtl() ? 'للتجربة، أدخلوا رمز الشهادة النموذجية:' : 'To try it, enter the code of the sample certificate:' ?> <code dir="ltr">ARG-CD-2610-7K3Q</code></p><?php endif; ?>
     </form>
     <div class="verify__result" data-verify-result aria-live="polite" hidden></div>
   </div></div>
