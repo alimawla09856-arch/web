@@ -7,7 +7,31 @@ Built for the **Premium package** (see `docs/HANDOVER.md` for the feature checkl
 - **Stack:** plain PHP 8.1+ and SQLite, vanilla JavaScript, one CSS file. No framework, no build step, no Composer — it runs on any standard cPanel hosting.
 - **Motion:** GSAP 3.15 (ScrollTrigger, SplitText, DrawSVG, ScrambleText — free standard licence) and Lenis smooth scrolling, vendored in `assets/vendor/`. The home page's scroll story is a small custom WebGL particle engine (`assets/js/world.js`, no 3D library). Reduced-motion and no-WebGL visitors get a calm, fully readable version.
 - **Languages:** separate URLs per language (`/en/…`, `/ar/…`), English by default, the visitor's choice is remembered.
-- **Speed:** about 21 KB of CSS + JS after compression (85 KB raw), an 8 KB home page, Google Fonts with `display=swap`, and no photos on the critical path — the hero is drawn on a canvas.
+- **Speed:** v1 has no photos on the critical path (the hero is drawn on a canvas); v2 serves responsive WebP photos (640 / 1200 / 2000 px) with only the first hero photo loaded eagerly. Google Fonts use `display=swap`.
+
+## Two design versions
+
+The site ships with two complete designs that share the same content, forms, admin panel and URLs. Switch with one line in `app/config.php`:
+
+```php
+'theme' => 'v1',   // or 'v2'
+```
+
+| | v1 — “Scroll world” | v2 — “Real photos” |
+| --- | --- | --- |
+| Home | WebGL particle story (film → container → shreds → ingot → Lebanon → leaf) | Photo-led story: the X-ray film is wiped into silver, then into a leaf as you scroll; a manifesto with inline photos; the four steps in a horizontal scroll; a fanned deck of documents; Beirut with the counters; the word *Green* filled with a real leaf |
+| Inner pages | Line illustrations, light heroes | Full-bleed photo heroes, photo steps, photos that follow the pointer on the hospitals list, full-screen menu on mobile |
+| Files | `app/views/pages/*`, `assets/js/world.js` | `app/views/themes/v2/*` (overrides only), `assets/css/v2.css`, `assets/js/v2.js`, `assets/photos/` |
+
+A file in `app/views/themes/v2/` replaces the file with the same path in `app/views/`; everything else is shared. For a quick test without editing the config: `ARGENTUM_THEME=v2 php -S localhost:8000 index.php`.
+
+### Photos (v2)
+
+`assets/photos/` holds 13 photos supplied by the client (stock images), exported as WebP in several widths with English and Arabic alt text (`manifest.json`). They are processed by `tools/process-photos.py`, which also blurs what must not appear on the site: signage in the hospital corridor and the mint names stamped on the stock silver bars. Replace the silver photos with Argentum’s own silver as soon as it exists, then rerun:
+
+```bash
+python3 tools/process-photos.py path/to/originals
+```
 
 ## Pages
 
@@ -36,13 +60,13 @@ Open <http://localhost:8000>. Without `app/config.php` the sample configuration 
 
 ## Design preview on Netlify
 
-`preview/` is a static copy of every page for showing the design before launch (forms show their confirmation without sending, `/verify/` accepts the sample code `ARG-CD-2610-7K3Q`, and every page is `noindex`).
+`preview/` (v1) and `preview-v2/` (v2) are static copies of every page for showing the design before launch (forms show their confirmation without sending, `/verify/` accepts the sample code `ARG-CD-2610-7K3Q`, and every page is `noindex`).
 
-- Rebuild after any change: `php tools/build-preview.php`
-- Netlify, linked to this repository: publish directory `preview` (already set in `netlify.toml`, no build command).
-- Or drag the `preview/` folder onto <https://app.netlify.com/drop>.
+- Rebuild after any change: `php tools/build-preview.php` and `php tools/build-preview.php --theme=v2`
+- Netlify, linked to this repository: publish directory `preview` (already set in `netlify.toml`, no build command). For a second link with v2, create another Netlify site from the same repository with publish directory `preview-v2`.
+- Or drag the `preview/` or `preview-v2/` folder onto <https://app.netlify.com/drop>.
 
-Do not upload `preview/` or `tools/` to the PHP host (`.htaccess` blocks them anyway).
+Do not upload `preview/`, `preview-v2/` or `tools/` to the PHP host (`.htaccess` blocks them anyway).
 
 ## Deploy to cPanel
 
@@ -92,13 +116,19 @@ app/
   documents.php        certificate / assay codes, GET /api/verify
   admin.php            admin panel controller, CSV / XLSX export
   views/               layout, pages, partials, admin templates
+  views/themes/v2/     v2 overrides of pages and partials
 content/
   en.json, ar.json     all website text (edited from the admin panel)
   site.json            settings (edited from the admin panel)
 assets/
   css/site.css         design system and components (RTL via logical properties)
+  css/v2.css           v2 design layer (loaded only when theme = v2)
   css/admin.css        admin panel
-  js/site.js           hero animation, timeline, counters, forms, verify, consent
+  js/site.js           forms, navigation, tabs, verify, consent
+  js/motion.js         shared motion layer: smooth scroll, reveals, counters
+  js/world.js          v1 WebGL scroll world
+  js/v2.js             v2 scenes: photo wipes, horizontal steps, document deck
+  photos/              v2 photo library (WebP + manifest.json)
   brand/               logo SVGs (traced from the supplied artwork), favicons
   img/                 icon sprite, social share images
   vendor/              qrcode-generator 1.4.4 (MIT) for printed documents

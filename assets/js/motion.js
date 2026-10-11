@@ -88,9 +88,10 @@
     const title = $('[data-split="hero"]');
     if (!title) return;
     splitReveal(title, { duration: 1.3, stagger: arabic ? 0.12 : 0.045 });
-    gsap.timeline({ defaults: { ease: 'expo.out' }, delay: 0.35 })
-      .from($$('[data-hero-fade]'), { y: 28, autoAlpha: 0, duration: 1.1, stagger: 0.1 })
-      .from('.hud-tile, .hud-rail li', { autoAlpha: 0, y: 10, duration: 0.8, stagger: 0.05 }, '-=0.9');
+    const tl = gsap.timeline({ defaults: { ease: 'expo.out' }, delay: 0.35 })
+      .from($$('[data-hero-fade]'), { y: 28, autoAlpha: 0, duration: 1.1, stagger: 0.1 });
+    const hud = $$('.hud-tile, .hud-rail li');
+    if (hud.length) tl.from(hud, { autoAlpha: 0, y: 10, duration: 0.8, stagger: 0.05 }, '-=0.9');
   }
 
   function revealHeadings() {

@@ -81,8 +81,9 @@ function json_response(array $data, int $status = 200): never
 function render(string $view, array $vars = []): string
 {
     extract($vars, EXTR_SKIP);
+    $themed = APP_DIR . '/views/themes/' . theme() . '/' . $view . '.php';
     ob_start();
-    require APP_DIR . '/views/' . $view . '.php';
+    require is_file($themed) ? $themed : APP_DIR . '/views/' . $view . '.php';
     return (string) ob_get_clean();
 }
 
@@ -138,4 +139,21 @@ function security_headers(): void
     header('Referrer-Policy: strict-origin-when-cross-origin');
     header('X-Frame-Options: SAMEORIGIN');
     header('Permissions-Policy: camera=(), microphone=(), geolocation=()');
+}
+
+/** Stock / client photo from assets/photos (see tools/process-photos.py). */
+function photo(string $key, string $class = '', string $sizes = '100vw', bool $eager = false, ?string $alt = null): string
+{
+    static $manifest = null;
+    $manifest ??= load_json(ROOT_DIR . '/assets/photos/manifest.json');
+    $m = $manifest[$key] ?? null;
+    if (!$m) {
+        return '';
+    }
+    $srcset = implode(', ', array_map(fn ($w) => url('assets/photos/' . $key . '-' . $w . '.webp') . ' ' . $w . 'w', $m['sizes']));
+    $mid = $m['sizes'][min(1, count($m['sizes']) - 1)];
+    $alt ??= (string) ($m['alt_' . current_lang()] ?? '');
+    return '<img' . ($class ? ' class="' . e($class) . '"' : '') . ' src="' . e(url('assets/photos/' . $key . '-' . $mid . '.webp')) . '"'
+        . ' srcset="' . e($srcset) . '" sizes="' . e($sizes) . '" width="' . (int) $m['w'] . '" height="' . (int) $m['h'] . '"'
+        . ' alt="' . e($alt) . '"' . ($eager ? ' fetchpriority="high"' : ' loading="lazy"') . ' decoding="async">';
 }

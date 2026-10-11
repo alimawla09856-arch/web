@@ -4,6 +4,15 @@ Prepared for Argentum · Premium package · October 2026
 
 This draft contains every page and every feature of the Premium package, working end to end. The open items at the bottom are the details we still need from Argentum to finish and publish the site.
 
+## Two designs to choose from
+
+Both versions contain every page and every feature below; only the look and the home page story differ. Argentum can pick one, and switching later is one line in the server configuration.
+
+- **v1 — Scroll world:** a 3D particle story on the home page (film → container → shredded film → silver ingot → Lebanon → leaf), line illustrations elsewhere.
+- **v2 — Real photos:** built around the photos supplied for the project. The X-ray film turns into silver, then into a green leaf as you scroll; the four steps slide sideways with a photo each; the documents fan out like a hand of cards; every inner page opens on a full-screen photo.
+
+Photo notes: the photos are stock images. Signage in the hospital corridor and the mint names on the stock silver bars are blurred, so the site never shows another company’s name or products as Argentum’s. No patient names appear on the X-ray photos. We recommend replacing the silver photos with Argentum’s own silver first.
+
 ## Scope delivered
 
 | Package item (proposal) | Where it is |
@@ -34,7 +43,7 @@ Every certificate of destruction and assay report can be issued from the admin p
 1. **Hosting & domain:** cPanel access for argentumco.com (the brief leaves hosting empty).
 2. **Contact details:** public e-mail, lead notification e-mail, main phone, WhatsApp number, address, Google Maps link, LinkedIn / Facebook / Instagram links.
 3. **Company documents:** commercial registration and any Ministry of Environment permits, if they should appear on the site.
-4. **Photos:** collection (containers, weighing), facility, recovered silver, X-ray film close-ups. Until then the site uses its own line illustrations instead of stock photos.
+4. **Photos:** collection (containers, weighing), facility, recovered silver, X-ray film close-ups. v1 uses line illustrations; v2 uses the supplied stock photos until Argentum’s own are ready.
 5. **Original logo files:** we rebuilt the logo as vector files from the PDF; please send the original SVG/PNG set mentioned in the brief so we can compare.
 6. **Real figures** for the counters when you want to switch from commitments to totals.
 

@@ -63,6 +63,7 @@ $org = array_filter([
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?<?= $fonts ?>&display=swap">
 <link rel="stylesheet" href="<?= e(asset('css/site.css')) ?>">
+<?php if (theme() === 'v2'): ?><link rel="stylesheet" href="<?= e(asset('css/v2.css')) ?>"><?php endif; ?>
 <script>
 (function (h) {
   h.classList.replace('no-js', 'js');
@@ -83,7 +84,7 @@ $org = array_filter([
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 <?php endif; ?>
 </head>
-<body class="page-<?= e($page) ?>">
+<body class="page-<?= e($page) ?> theme-<?= theme() ?>">
 <?php if ($page === 'home'): ?>
 <div class="preloader" data-preloader aria-hidden="true">
   <div class="preloader__inner">
@@ -133,7 +134,8 @@ $org = array_filter([
 <script src="<?= e(asset('vendor/' . $lib)) ?>" defer></script>
 <?php endforeach; ?>
 <script src="<?= e(asset('js/site.js')) ?>" defer></script>
-<?php if ($page === 'home'): ?><script src="<?= e(asset('js/world.js')) ?>" defer></script><?php endif; ?>
+<?php if ($page === 'home' && theme() === 'v1'): ?><script src="<?= e(asset('js/world.js')) ?>" defer></script><?php endif; ?>
 <script src="<?= e(asset('js/motion.js')) ?>" defer></script>
+<?php if (theme() === 'v2'): ?><script src="<?= e(asset('js/v2.js')) ?>" defer></script><?php endif; ?>
 </body>
 </html>

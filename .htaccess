@@ -11,7 +11,7 @@ AddDefaultCharset UTF-8
   # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # Private folders are never served
-  RewriteRule ^(app|content|storage|docs|tools|preview)(/|$) - [F,L]
+  RewriteRule ^(app|content|storage|docs|tools|preview|preview-v2)(/|$) - [F,L]
   RewriteRule (^|/)\. - [F,L]
 
   # Real files (CSS, JS, images, uploads) are served directly

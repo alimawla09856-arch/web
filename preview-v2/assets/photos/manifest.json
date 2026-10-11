@@ -1,0 +1,145 @@
+{
+  "archive-boxes": {
+    "w": 1800,
+    "h": 1013,
+    "sizes": [
+      640,
+      1200,
+      1800
+    ],
+    "alt_en": "Archive boxes on shelves",
+    "alt_ar": "صناديق أرشيف على الرفوف"
+  },
+  "beirut": {
+    "w": 1800,
+    "h": 1144,
+    "sizes": [
+      640,
+      1200,
+      1800
+    ],
+    "alt_en": "Beirut and the Raouché rocks from above",
+    "alt_ar": "بيروت وصخرة الروشة من الأعلى"
+  },
+  "collection-boxes": {
+    "w": 1800,
+    "h": 763,
+    "sizes": [
+      640,
+      1200,
+      1800
+    ],
+    "alt_en": "Sealed boxes ready for collection",
+    "alt_ar": "صناديق مغلقة جاهزة للجمع"
+  },
+  "hospital-corridor": {
+    "w": 1800,
+    "h": 1350,
+    "sizes": [
+      640,
+      1200,
+      1800
+    ],
+    "alt_en": "A quiet hospital corridor",
+    "alt_ar": "ممرّ هادئ في مستشفى"
+  },
+  "lab-bench": {
+    "w": 1800,
+    "h": 1200,
+    "sizes": [
+      640,
+      1200,
+      1800
+    ],
+    "alt_en": "A clean laboratory bench",
+    "alt_ar": "طاولة مختبر نظيفة"
+  },
+  "lab-glass": {
+    "w": 1800,
+    "h": 1200,
+    "sizes": [
+      640,
+      1200,
+      1800
+    ],
+    "alt_en": "Laboratory glassware",
+    "alt_ar": "أدوات زجاجية في مختبر"
+  },
+  "leaf-drops": {
+    "w": 1800,
+    "h": 2250,
+    "sizes": [
+      640,
+      1200,
+      1800
+    ],
+    "alt_en": "Water drops on a green leaf",
+    "alt_ar": "قطرات ماء على ورقة خضراء"
+  },
+  "leaf-veins": {
+    "w": 1700,
+    "h": 1133,
+    "sizes": [
+      640,
+      1200,
+      1700
+    ],
+    "alt_en": "Close-up of a green leaf with water drops",
+    "alt_ar": "ورقة خضراء عن قرب مع قطرات ماء"
+  },
+  "silver-bars-grid": {
+    "w": 1800,
+    "h": 1200,
+    "sizes": [
+      640,
+      1200,
+      1800
+    ],
+    "alt_en": "Rows of silver bars",
+    "alt_ar": "صفوف من سبائك الفضة"
+  },
+  "silver-bars": {
+    "w": 2000,
+    "h": 1333,
+    "sizes": [
+      640,
+      1200,
+      2000
+    ],
+    "alt_en": "Bars of recovered silver",
+    "alt_ar": "سبائك من الفضة"
+  },
+  "xray-chest": {
+    "w": 2000,
+    "h": 1601,
+    "sizes": [
+      640,
+      1200,
+      2000
+    ],
+    "alt_en": "Chest X-ray film on a light box",
+    "alt_ar": "فيلم أشعة للصدر على لوح مضيء"
+  },
+  "xray-shoulder": {
+    "w": 1600,
+    "h": 999,
+    "sizes": [
+      640,
+      1200,
+      1600
+    ],
+    "alt_en": "X-ray film of a shoulder",
+    "alt_ar": "فيلم أشعة للكتف"
+  },
+  "xray-wrist": {
+    "w": 2000,
+    "h": 1196,
+    "sizes": [
+      640,
+      1200,
+      2000
+    ],
+    "alt_en": "X-ray film of a wrist and hand",
+    "alt_ar": "فيلم أشعة للمعصم واليد"
+  }
+}

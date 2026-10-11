@@ -790,5 +790,22 @@
         "reply_subject": "We received your request — Argentum",
         "reply_collection": "Hello {name},\n\nThank you for contacting Argentum. We received your collection request and will contact you within 48 hours to agree a date.\n\nIf you would like to add anything, simply reply to this e-mail.",
         "reply_silver": "Hello {name},\n\nThank you for your interest in Argentum’s recovered silver. We received your enquiry and our team will reply with availability and pricing.\n\nIf you would like to add anything, simply reply to this e-mail."
+    },
+    "v2": {
+        "hero_words": [
+            "Film",
+            "Silver",
+            "Green"
+        ],
+        "scroll": "Scroll",
+        "manifesto": "We collect used X-ray film {xray-wrist} from hospitals across Lebanon {beirut}, destroy it securely {archive-boxes}, recover the silver inside {silver-bars} and return it to use {leaf-drops}.",
+        "process_title": "Four steps, each one documented",
+        "process_hint": "Keep scrolling",
+        "lebanon_title": "Across Lebanon",
+        "lebanon_text": "From Akkar to the South, we collect from hospitals, imaging centres and clinics in every region.",
+        "green_word": "Green",
+        "menu": "Menu",
+        "close": "Close",
+        "see_page": "Open page"
     }
 }

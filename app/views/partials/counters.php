@@ -8,9 +8,11 @@ $mode = setting('counters.mode', 'promise') === 'totals' ? 'totals' : 'promise';
 $values = (array) setting('counters.' . $mode, []);
 $labels = tl('counters.' . $mode);
 ?>
+<?php if (empty($bare)): ?>
 <section class="section section--tight counters" aria-labelledby="counters-title">
   <div class="wrap">
     <h2 class="counters__title" id="counters-title" data-split><?= __('counters.title') ?></h2>
+<?php endif; ?>
     <dl class="readout" data-odometers>
       <?php foreach ($labels as $i => $c):
           $v = (float) ($values[$i] ?? 0);
@@ -25,5 +27,7 @@ $labels = tl('counters.' . $mode);
         </div>
       <?php endforeach; ?>
     </dl>
+<?php if (empty($bare)): ?>
   </div>
 </section>
+<?php endif; ?>

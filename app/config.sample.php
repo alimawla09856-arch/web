@@ -13,6 +13,9 @@ return [
     // Public address of the site, without a trailing slash.
     'base_url' => 'https://argentumco.com',
 
+    // Design version: 'v1' (3D scroll story) or 'v2' (photo-led editorial).
+    'theme' => 'v1',
+
     // Show PHP errors in the browser. Keep false in production.
     'debug' => false,
 

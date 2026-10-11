@@ -35,6 +35,13 @@ require APP_DIR . '/documents.php';
 require APP_DIR . '/router.php';
 require APP_DIR . '/admin.php';
 
+/** Active design: 'v1' (scroll world) or 'v2' (photo-led). Set 'theme' in app/config.php. */
+function theme(): string
+{
+    $t = defined('ARGENTUM_THEME') ? ARGENTUM_THEME : (getenv('ARGENTUM_THEME') ?: (string) config('theme', 'v1'));
+    return in_array($t, ['v1', 'v2'], true) ? $t : 'v1';
+}
+
 /** Reads a value from app/config.php using dot notation. */
 function config(string $key, mixed $default = null): mixed
 {
