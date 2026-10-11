@@ -1,0 +1,15 @@
+# Server-specific secrets
+/app/config.php
+# Runtime data
+/storage/*
+!/storage/.htaccess
+!/storage/.gitkeep
+/uploads/*
+!/uploads/.htaccess
+!/uploads/.gitkeep
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+node_modules/

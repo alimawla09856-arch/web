@@ -1,0 +1,49 @@
+{
+    "contact": {
+        "email": "",
+        "phone": "",
+        "whatsapp": "",
+        "address_en": "",
+        "address_ar": "",
+        "maps_url": "",
+        "maps_embed": "",
+        "hours_en": "Mon–Fri 8:00–17:00, Sat 8:00–13:00",
+        "hours_ar": "الإثنين–الجمعة 8:00–17:00، السبت 8:00–13:00",
+        "linkedin": "",
+        "facebook": "",
+        "instagram": ""
+    },
+    "company": {
+        "registration_en": "",
+        "registration_ar": "",
+        "permits_en": "",
+        "permits_ar": ""
+    },
+    "counters": {
+        "mode": "promise",
+        "promise": [
+            100,
+            0,
+            48,
+            99.9
+        ],
+        "totals": [
+            0,
+            0,
+            0,
+            99.9
+        ]
+    },
+    "notifications": {
+        "lead_email": "",
+        "collection_emails": "",
+        "silver_emails": "",
+        "whatsapp_numbers": "",
+        "auto_reply": true
+    },
+    "analytics": {
+        "ga4_id": "",
+        "gsc_verification": ""
+    },
+    "media": {}
+}

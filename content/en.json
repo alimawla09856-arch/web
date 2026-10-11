@@ -1,0 +1,760 @@
+{
+    "meta": {
+        "site_name": "Argentum",
+        "slogan": "Turning silver into green.",
+        "pages": {
+            "home": {
+                "title": "Argentum — Silver recovery from used X-ray film in Lebanon",
+                "description": "Argentum buys, collects and securely destroys used X-ray film from hospitals and imaging centres across Lebanon, then recovers the silver inside. Certificate of destruction with every collection."
+            },
+            "hospitals": {
+                "title": "Sell your used X-ray film — collections for hospitals | Argentum",
+                "description": "Get paid for used X-ray film. Sealed collection across Lebanon, weighing on site, controlled destruction of patient data and a certificate of destruction."
+            },
+            "buyers": {
+                "title": "Buy recovered silver, assayed 99.9% | Argentum",
+                "description": "Silver recovered from X-ray film, sold to silver shops and refiners in Lebanon at the market price, with an assay report for every batch."
+            },
+            "process": {
+                "title": "How it works: from X-ray film to silver | Argentum",
+                "description": "Four documented steps: collection, sorting and secure destruction, silver extraction and refining, and silver back to market."
+            },
+            "about": {
+                "title": "Impact & about Argentum — turning silver into green",
+                "description": "Our mission, our vision and the environmental impact of recovering silver from medical waste in Lebanon."
+            },
+            "contact": {
+                "title": "Contact Argentum — arrange an X-ray film collection",
+                "description": "Arrange a collection, buy recovered silver or ask a question. WhatsApp, phone and e-mail."
+            },
+            "verify": {
+                "title": "Verify an Argentum certificate or assay report",
+                "description": "Check that a certificate of destruction or an assay report was really issued by Argentum."
+            },
+            "privacy": {
+                "title": "Privacy policy | Argentum",
+                "description": "How Argentum handles the information you send through this website."
+            },
+            "404": {
+                "title": "Page not found | Argentum",
+                "description": "This page does not exist."
+            }
+        }
+    },
+    "nav": {
+        "process": "Our process",
+        "hospitals": "For hospitals",
+        "buyers": "For silver buyers",
+        "about": "Impact & about",
+        "contact": "Contact",
+        "contact_cta": "Contact us",
+        "menu": "Menu",
+        "close": "Close menu",
+        "skip": "Skip to content",
+        "language": "Language",
+        "main": "Main navigation"
+    },
+    "common": {
+        "request_collection": "Request a collection",
+        "buy_silver": "Buy recovered silver",
+        "contact_us": "Contact us",
+        "whatsapp_chat": "Chat on WhatsApp",
+        "whatsapp_short": "WhatsApp",
+        "whatsapp_message": "Hello Argentum, I’d like to arrange an X-ray film collection.",
+        "whatsapp_message_silver": "Hello Argentum, I’d like to ask about buying recovered silver.",
+        "sample": "Sample",
+        "optional": "optional",
+        "back_home": "Back to the home page",
+        "replay": "Replay",
+        "you_receive": "You receive"
+    },
+    "home": {
+        "hero": {
+            "slogan": "Turning silver into green.",
+            "title": "Your used X-ray film is worth money. We make it count.",
+            "sub": "Argentum buys, collects and securely destroys used X-ray film from hospitals and imaging centres across Lebanon, then recovers the silver inside. You get paid, patient data stays protected, and nothing goes to landfill."
+        },
+        "lightbox": {
+            "label": "Animation: a used X-ray film dissolves into silver particles that settle into the Argentum leaf.",
+            "stages": [
+                "Film",
+                "Silver",
+                "Green"
+            ],
+            "captions": [
+                "Used X-ray film",
+                "Silver recovered",
+                "Turning silver into green."
+            ],
+            "element": "Argentum"
+        },
+        "trust": [
+            {
+                "title": "Certificate of destruction",
+                "text": "With every collection, ready for your compliance file."
+            },
+            {
+                "title": "Paid at market rate",
+                "text": "Your film is weighed on site, with a signed receipt."
+            },
+            {
+                "title": "Assay report with every batch",
+                "text": "Purity is tested before any silver is sold."
+            }
+        ],
+        "doors": {
+            "hospitals": {
+                "label": "For hospitals, imaging centres and clinics",
+                "title": "You have used X-ray film.",
+                "text": "Archived boxes or ongoing waste: we collect it, destroy it securely and pay you for it.",
+                "points": [
+                    "Paid at the agreed rate, on a signed receipt",
+                    "Patient data destroyed, with a certificate",
+                    "Every collection weighed and documented",
+                    "No effort on your side: we come with sealed containers"
+                ],
+                "link": "How it works for hospitals"
+            },
+            "buyers": {
+                "label": "For silver shops and refiners",
+                "title": "You buy silver.",
+                "text": "Silver recovered from X-ray film, sold at the market price with an assay report for every batch.",
+                "stat_label": "assayed purity",
+                "link": "Details for silver buyers"
+            }
+        },
+        "process": {
+            "title": "From film to silver, in four documented steps",
+            "intro": "Each step leaves a document behind, so you always know where your film went and what became of it.",
+            "cta": "See the full process"
+        },
+        "cta": {
+            "title": "Have used X-ray film in storage?",
+            "text": "Tell us roughly how much you have. We respond within 48 hours to arrange a collection."
+        }
+    },
+    "steps": [
+        {
+            "name": "Collection",
+            "text": "We collect your used X-ray film on a scheduled date, in sealed containers. The film is weighed on site, and you receive a signed receipt and payment at the agreed rate.",
+            "outputs": [
+                "Signed receipt",
+                "Payment at the agreed rate"
+            ]
+        },
+        {
+            "name": "Sorting & secure destruction",
+            "text": "At our facility, the film is sorted and prepared in a controlled environment. Patient information is destroyed in the process, and you receive a certificate of destruction.",
+            "outputs": [
+                "Certificate of destruction"
+            ]
+        },
+        {
+            "name": "Silver extraction & refining",
+            "text": "Silver is recovered from the film through a safe, controlled process, then refined and tested for purity.",
+            "outputs": [
+                "Purity test"
+            ]
+        },
+        {
+            "name": "Silver back to market",
+            "text": "The recovered silver is sold to silver shops and refiners at the market price, with an assay report for every batch. The remaining materials are handled responsibly.",
+            "outputs": [
+                "Assay report for every batch"
+            ]
+        }
+    ],
+    "counters": {
+        "title": "Our commitments, in numbers",
+        "promise": [
+            {
+                "unit": "%",
+                "label": "of film securely destroyed"
+            },
+            {
+                "unit": "kg",
+                "label": "sent to landfill"
+            },
+            {
+                "unit": "h",
+                "label": "collection response"
+            },
+            {
+                "unit": "%",
+                "label": "assayed silver purity"
+            }
+        ],
+        "totals": [
+            {
+                "unit": "kg",
+                "label": "of X-ray film collected"
+            },
+            {
+                "unit": "kg",
+                "label": "of silver recovered"
+            },
+            {
+                "unit": "",
+                "label": "partner hospitals & centres"
+            },
+            {
+                "unit": "%",
+                "label": "assayed silver purity"
+            }
+        ]
+    },
+    "routes": {
+        "title": "Where used film ends up matters",
+        "intro": "Used X-ray film contains silver, a heavy metal that can pollute soil and water when film is dumped or burned.",
+        "tabs_label": "Compare what happens to used film",
+        "dumped": {
+            "tab": "Dumped or burned",
+            "nodes": [
+                "Used X-ray film",
+                "Landfill or open burning",
+                "Silver seeps into soil and water"
+            ],
+            "outcome": "A valuable metal is lost, and the pollution stays."
+        },
+        "argentum": {
+            "tab": "Collected by Argentum",
+            "nodes": [
+                "Used X-ray film",
+                "Sealed collection, weighed on site",
+                "Silver recovered and refined",
+                "Silver back in the local economy"
+            ],
+            "outcome": "Nothing goes to landfill, less silver needs to be mined, and every collection is documented so partners can report their own contribution."
+        },
+        "link": "Read about our impact"
+    },
+    "paper": {
+        "title": "Proof at every step",
+        "intro": "Every collection produces documents you can file, show an auditor or use in your own environmental reporting. Certificates and assay reports carry a code anyone can check on this website.",
+        "items": [
+            {
+                "title": "Signed receipt",
+                "when": "At collection",
+                "text": "The weight measured on site and the agreed payment."
+            },
+            {
+                "title": "Certificate of destruction",
+                "when": "After processing",
+                "text": "Confirms the film, and the patient information on it, were destroyed."
+            },
+            {
+                "title": "Assay report",
+                "when": "With every silver batch",
+                "text": "The tested purity of the recovered silver, for buyers."
+            }
+        ],
+        "verify": "Verify a document"
+    },
+    "docs": {
+        "certificate": {
+            "title": "Certificate of destruction",
+            "no": "Certificate no.",
+            "to": "Issued to",
+            "to_value": "Your hospital",
+            "date": "Collection date",
+            "weight": "Net weight",
+            "material": "Material",
+            "material_value": "Used X-ray film",
+            "method": "Treatment",
+            "method_value": "Controlled destruction and silver recovery",
+            "statement": "This certifies that the material listed above, including all patient information it carried, has been destroyed by Argentum.",
+            "signature": "Authorised signature",
+            "verify": "Verify at argentumco.com/verify"
+        },
+        "assay": {
+            "title": "Assay report",
+            "no": "Report no.",
+            "batch": "Batch reference",
+            "date": "Date",
+            "weight": "Net weight",
+            "result": "Result",
+            "element": "Silver (Ag)",
+            "note": "Purity of recovered silver",
+            "signature": "Authorised signature",
+            "verify": "Verify at argentumco.com/verify"
+        }
+    },
+    "hospitals": {
+        "hero": {
+            "label": "For hospitals, imaging centres and clinics",
+            "title": "Your used film has a price. Your patients’ data stays protected.",
+            "sub": "We collect used X-ray film across Lebanon, weigh it on site, pay you at the agreed rate and destroy it in a controlled process. Every hospital receives a certificate of destruction."
+        },
+        "benefits": {
+            "title": "What working with Argentum means",
+            "items": [
+                {
+                    "title": "You get paid",
+                    "text": "Your film is weighed on site. You receive a signed receipt and payment at the agreed rate."
+                },
+                {
+                    "title": "Patient data stays protected",
+                    "text": "Film travels in sealed containers and is destroyed in a controlled process. Patient information does not survive it."
+                },
+                {
+                    "title": "Everything on paper",
+                    "text": "A signed receipt at collection and a certificate of destruction afterwards, ready for your files and audits."
+                },
+                {
+                    "title": "Nothing to organise",
+                    "text": "Tell us what you have. We schedule the date, come with sealed containers and handle the rest."
+                }
+            ]
+        },
+        "collect": {
+            "title": "What we collect",
+            "from_label": "From",
+            "from": [
+                "Hospitals",
+                "Imaging centres",
+                "Clinics",
+                "Dental clinics"
+            ],
+            "film_label": "Film",
+            "film": [
+                "Archived films",
+                "Current and ongoing film waste"
+            ],
+            "note": "Not sure what you have? Choose “Not sure” in the form and we will check on site."
+        },
+        "confidentiality": {
+            "title": "Patient confidentiality, built into the process",
+            "text": "X-ray films carry patient names and medical information. We collect them in sealed containers and destroy them in a controlled process, and every hospital receives a certificate of destruction.",
+            "steps": [
+                "Sealed at your site",
+                "Destroyed in a controlled process",
+                "Certificate issued to you"
+            ]
+        },
+        "faq": {
+            "title": "Questions hospitals ask us",
+            "items": [
+                {
+                    "q": "Do you pay for the film?",
+                    "a": "Yes. Your film is weighed on site and you are paid at the agreed rate, with a signed receipt."
+                },
+                {
+                    "q": "How is patient data protected?",
+                    "a": "We collect film in sealed containers and destroy it in a controlled process. Every hospital receives a certificate of destruction."
+                },
+                {
+                    "q": "Which areas do you cover?",
+                    "a": "We collect from hospitals, imaging centres and clinics across Lebanon, from Beirut to Akkar and the Bekaa."
+                },
+                {
+                    "q": "How quickly do you respond?",
+                    "a": "We respond to every collection request within 48 hours to agree a date."
+                },
+                {
+                    "q": "Do you take archived film?",
+                    "a": "Yes. We collect archived films and ongoing film waste. If you are not sure what you have, choose “Not sure” in the form and we will check."
+                },
+                {
+                    "q": "Which documents do we receive?",
+                    "a": "A signed receipt with the weight at collection, and a certificate of destruction after processing. Any Argentum certificate can be verified on this website."
+                }
+            ]
+        },
+        "form": {
+            "title": "Request a collection",
+            "intro": "Three short steps, about two minutes. We respond within 48 hours.",
+            "aside_title": "Prefer to talk?",
+            "aside_text": "Message us on WhatsApp and we will arrange everything with you."
+        }
+    },
+    "buyers": {
+        "hero": {
+            "label": "For silver shops and refiners",
+            "title": "Recovered silver, tested and documented.",
+            "sub": "Argentum sells silver recovered from used X-ray film to silver shops and refiners at the market price, with an assay report for every batch."
+        },
+        "specs": {
+            "title": "What you can expect",
+            "items": [
+                {
+                    "label": "Purity",
+                    "value": "99.9%",
+                    "note": "Assayed, for every batch"
+                },
+                {
+                    "label": "Price",
+                    "value": "Market price",
+                    "note": "Set at the market rate at the time of sale"
+                },
+                {
+                    "label": "Documentation",
+                    "value": "Assay report",
+                    "note": "Delivered with every batch"
+                },
+                {
+                    "label": "Supply",
+                    "value": "One-time or recurring",
+                    "note": "Monthly or quarterly supply on request"
+                }
+            ]
+        },
+        "story": {
+            "title": "Silver with a cleaner story",
+            "text": "Every gram we sell was recovered from medical waste that would otherwise end up in landfill. It is silver that did not have to be mined."
+        },
+        "form": {
+            "title": "Buy recovered silver",
+            "intro": "Tell us what you need. We reply with availability and pricing.",
+            "aside_title": "Prefer to talk?",
+            "aside_text": "Message us on WhatsApp for availability."
+        }
+    },
+    "process": {
+        "hero": {
+            "title": "How Argentum works",
+            "sub": "From your storage room to the silver market in four steps. Each one is documented, and each one leaves you a record."
+        },
+        "method": {
+            "title": "What we keep private, and what we prove",
+            "text": "We keep the technical details of our recovery method confidential. What we share is the result: tested purity and a document at every step."
+        },
+        "table": {
+            "title": "The paper trail, step by step",
+            "cols": [
+                "Step",
+                "Document",
+                "For"
+            ],
+            "rows": [
+                [
+                    "Collection",
+                    "Signed receipt",
+                    "Supplier"
+                ],
+                [
+                    "Sorting & secure destruction",
+                    "Certificate of destruction",
+                    "Supplier"
+                ],
+                [
+                    "Silver extraction & refining",
+                    "Purity test",
+                    "Feeds the assay report"
+                ],
+                [
+                    "Silver back to market",
+                    "Assay report",
+                    "Buyer"
+                ]
+            ]
+        }
+    },
+    "about": {
+        "hero": {
+            "title": "Turning silver into green.",
+            "sub": "Argentum is a Lebanese company that recovers silver from used X-ray film. Green stands for both the environmental impact and the value we create."
+        },
+        "mission": {
+            "label": "Mission",
+            "text": "To make silver recovery from medical waste the standard in Lebanon: safe for patient data, fair to our suppliers, and good for the environment."
+        },
+        "vision": {
+            "label": "Vision",
+            "text": "A world where no X-ray film ends up in landfill, and every gram of silver returns to use."
+        },
+        "name": {
+            "title": "Why Argentum?",
+            "text": "Argentum is the Latin word for silver. It is also where silver’s chemical symbol, Ag, comes from."
+        },
+        "impact": {
+            "title": "Environmental impact",
+            "text": "Used X-ray film contains silver, a heavy metal that can pollute soil and water when film is dumped or burned. By collecting the film and recovering its silver, Argentum keeps it out of landfill, reduces the need for newly mined silver, and returns a valuable metal to the local economy. Every collection is weighed and documented, so our partners can report their own environmental contribution."
+        },
+        "confidentiality": {
+            "title": "Patient confidentiality",
+            "text": "X-ray films carry patient names and medical information. We collect them in sealed containers and destroy them in a controlled process, and every hospital receives a certificate of destruction."
+        },
+        "documents": {
+            "title": "Documents we issue",
+            "available": "Available",
+            "items": [
+                {
+                    "title": "Certificate of destruction",
+                    "text": "Issued to every hospital after each collection."
+                },
+                {
+                    "title": "Assay report",
+                    "text": "Delivered with every batch of recovered silver."
+                }
+            ],
+            "registration": "Company registration",
+            "permits": "Permits and licences"
+        }
+    },
+    "contact": {
+        "hero": {
+            "title": "Talk to Argentum",
+            "sub": "Arrange a collection, buy recovered silver or ask us anything."
+        },
+        "chooser": {
+            "title": "What would you like to do?",
+            "collection": {
+                "title": "Arrange a collection",
+                "text": "For hospitals, imaging centres and clinics"
+            },
+            "silver": {
+                "title": "Buy recovered silver",
+                "text": "For silver shops and refiners"
+            }
+        },
+        "details": {
+            "title": "Reach us directly",
+            "whatsapp": "WhatsApp",
+            "phone": "Phone",
+            "email": "E-mail",
+            "address": "Address",
+            "hours": "Working hours",
+            "social": "Follow us",
+            "map": "Map",
+            "open_map": "Open in Google Maps",
+            "pending": "Our phone, e-mail and address will appear here shortly. Meanwhile, use the form and we will get back to you."
+        }
+    },
+    "verify": {
+        "title": "Verify an Argentum document",
+        "intro": "Every certificate of destruction and assay report we issue carries a unique code, printed on the document. Enter it below to confirm it is genuine.",
+        "label": "Document code",
+        "placeholder": "ARG-CD-0000-XXXX",
+        "button": "Verify",
+        "checking": "Checking…",
+        "where": "Where is the code?",
+        "where_text": "At the bottom of the document, next to the signature. It starts with ARG-.",
+        "valid_title": "Genuine document",
+        "valid_text": "This document was issued by Argentum.",
+        "fields": {
+            "kind": "Type",
+            "issued_on": "Issued on",
+            "organisation": "Issued to",
+            "weight": "Weight",
+            "purity": "Purity",
+            "reference": "Reference"
+        },
+        "revoked_title": "This document was revoked",
+        "revoked_text": "Contact us if you were given this document.",
+        "not_found_title": "No document matches this code",
+        "not_found_text": "Check the code printed on the document and try again. If it still does not match, contact us.",
+        "error": "We could not check the code right now. Try again in a moment.",
+        "rate_limited": "Too many attempts. Wait a few minutes and try again.",
+        "kinds": {
+            "destruction": "Certificate of destruction",
+            "assay": "Assay report"
+        }
+    },
+    "privacy": {
+        "title": "Privacy policy",
+        "updated": "Last updated: October 2026",
+        "sections": [
+            {
+                "title": "Who we are",
+                "text": "Argentum recovers silver from used X-ray film in Lebanon. This policy explains how we handle the information you send us through this website."
+            },
+            {
+                "title": "What we collect",
+                "text": "Only what you enter in our forms: organisation, contact person, job title, e-mail, phone, region, quantities and notes. We do not collect patient information through this website."
+            },
+            {
+                "title": "Why we use it",
+                "text": "To answer your request, arrange collections, send offers and keep a record of our business relationship. We never sell or rent your details."
+            },
+            {
+                "title": "Analytics",
+                "text": "If you accept analytics cookies, we use Google Analytics to measure visits in aggregate. If you decline, no analytics cookies are set."
+            },
+            {
+                "title": "How long we keep it",
+                "text": "For as long as needed to serve you and to meet our legal and accounting obligations."
+            },
+            {
+                "title": "Your choices",
+                "text": "You can ask us to see, correct or delete your details at any time, using the contact details on this website."
+            }
+        ]
+    },
+    "notfound": {
+        "title": "This page does not exist.",
+        "text": "The link may be old or mistyped. These pages might help:"
+    },
+    "forms": {
+        "steps": [
+            "Organisation",
+            "Contact",
+            "Film"
+        ],
+        "step_of": "Step {n} of {total}",
+        "next": "Continue",
+        "back": "Back",
+        "sending": "Sending…",
+        "privacy_note": "We only use these details to answer your request.",
+        "privacy_link": "Privacy policy",
+        "fields": {
+            "organisation": {
+                "label": "Organisation name"
+            },
+            "org_type": {
+                "label": "Organisation type",
+                "placeholder": "Choose a type",
+                "options": {
+                    "hospital": "Hospital",
+                    "imaging": "Imaging centre",
+                    "clinic": "Clinic",
+                    "dental": "Dental clinic",
+                    "other": "Other"
+                }
+            },
+            "org_type_other": {
+                "label": "What type of organisation?"
+            },
+            "region": {
+                "label": "City / region",
+                "placeholder": "Choose a region",
+                "options": {
+                    "beirut": "Beirut",
+                    "mount-lebanon": "Mount Lebanon",
+                    "north": "North",
+                    "south": "South",
+                    "bekaa": "Bekaa",
+                    "nabatieh": "Nabatieh",
+                    "akkar": "Akkar",
+                    "baalbek-hermel": "Baalbek-Hermel"
+                }
+            },
+            "contact_person": {
+                "label": "Contact person"
+            },
+            "job_title": {
+                "label": "Job title"
+            },
+            "email": {
+                "label": "E-mail"
+            },
+            "phone": {
+                "label": "Phone / WhatsApp",
+                "hint": "We may call or message you on WhatsApp to agree the date."
+            },
+            "quantity": {
+                "label": "Estimated quantity",
+                "options": {
+                    "lt50": "Under 50 kg",
+                    "50-200": "50–200 kg",
+                    "200-500": "200–500 kg",
+                    "500plus": "500 kg or more",
+                    "unsure": "Not sure"
+                },
+                "notes": {
+                    "500plus": "Large volume: we will call you first to plan the collection.",
+                    "unsure": "No problem. We weigh everything on site."
+                }
+            },
+            "sites": {
+                "label": "Sites to collect from",
+                "placeholder": "Choose",
+                "options": {
+                    "one": "One site",
+                    "two-three": "2–3 sites",
+                    "four-plus": "4 or more"
+                }
+            },
+            "film_types": {
+                "label": "Type of film",
+                "options": {
+                    "archived": "Archived films",
+                    "ongoing": "Current / ongoing waste",
+                    "unsure": "Not sure"
+                }
+            },
+            "certificate": {
+                "label": "Do you need a certificate of destruction?",
+                "options": {
+                    "yes": "Yes",
+                    "no": "No"
+                }
+            },
+            "certificate_name": {
+                "label": "Name to appear on the certificate",
+                "hint": "Leave empty to use the organisation name."
+            },
+            "preferred_date": {
+                "label": "Preferred collection date"
+            },
+            "notes": {
+                "label": "Notes",
+                "hint": "Access instructions, storage location, anything we should know."
+            },
+            "company": {
+                "label": "Company name"
+            },
+            "quantity_kg": {
+                "label": "Quantity of interest (kg)"
+            },
+            "frequency": {
+                "label": "Purchase frequency",
+                "options": {
+                    "one-time": "One-time",
+                    "monthly": "Monthly",
+                    "quarterly": "Quarterly"
+                },
+                "notes": {
+                    "monthly": "Recurring supply: we will propose a delivery schedule.",
+                    "quarterly": "Recurring supply: we will propose a delivery schedule."
+                }
+            }
+        },
+        "errors": {
+            "required": "This field is required.",
+            "email": "Enter a valid e-mail address, like name@hospital.com.",
+            "phone": "Enter a phone number with at least 7 digits.",
+            "option": "Choose one of the options.",
+            "too_long": "This text is too long.",
+            "number": "Enter a number between 0 and 100,000.",
+            "date": "Enter a valid date.",
+            "date_past": "Choose today or a later date."
+        },
+        "messages": {
+            "fix_errors": "Some fields need your attention.",
+            "error": "We could not send your request. Check your connection and try again, or contact us on WhatsApp.",
+            "rate_limited": "Too many requests from this connection. Wait a few minutes and try again.",
+            "captcha": "The spam check failed. Please try again."
+        },
+        "collection": {
+            "submit": "Send collection request",
+            "success_title": "Collection request sent",
+            "success_text": "Thank you. Our team will contact you within 48 hours to arrange the collection.",
+            "again": "Send another request"
+        },
+        "silver": {
+            "submit": "Send purchase enquiry",
+            "success_title": "Purchase enquiry sent",
+            "success_text": "Thank you. Our team will reply with availability and pricing.",
+            "again": "Send another enquiry"
+        }
+    },
+    "footer": {
+        "about": "Silver recovery from used X-ray film, across Lebanon.",
+        "work": "Work with us",
+        "company": "Company",
+        "contact": "Contact",
+        "rights": "© {year} Argentum. All rights reserved.",
+        "verify": "Verify a document",
+        "privacy": "Privacy policy"
+    },
+    "cookie": {
+        "text": "We would like to use analytics cookies to understand how this site is used. Nothing is shared for advertising.",
+        "accept": "Accept analytics",
+        "decline": "Decline"
+    },
+    "emails": {
+        "reply_subject": "We received your request — Argentum",
+        "reply_collection": "Hello {name},\n\nThank you for contacting Argentum. We received your collection request and will contact you within 48 hours to agree a date.\n\nIf you would like to add anything, simply reply to this e-mail.",
+        "reply_silver": "Hello {name},\n\nThank you for your interest in Argentum’s recovered silver. We received your enquiry and our team will reply with availability and pricing.\n\nIf you would like to add anything, simply reply to this e-mail."
+    }
+}
